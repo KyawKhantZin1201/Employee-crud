@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<body>
+
+<div th:fragment="empTable" class="container mt-5 my-3">
+  <h1>List Employee</h1>
+  <hr>
+  <a href="" th:href="@{/}" class="btn btn-sm btn-outline-secondary mt-2 my-2">New Employee</a>
+  <table class="table table-bordered">
+    <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Salary</th>
+      <th>Gender</th>
+      <th>HiredDate</th>
+      <th>Street Name</th>
+      <th>PhoneNumber</th>
+      <th>Email</th>
+      <th colspan="2">Action</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr th:each="emp : ${employees}">
+      <td th:text="${emp.id}"></td>
+      <td th:text="${emp.name}"></td>
+      <td th:text="${emp.salary}"></td>
+      <td th:text="${emp.gender}"></td>
+      <td th:text="${emp.hireDate}"></td>
+      <td th:text="${emp.address.streetName}"></td>
+      <td th:text="${emp.address.phoneNumber}"></td>
+      <td th:text="${emp.address.email}"></td>
+      <td>
+        <a href="" class="btn btn-sm btn-outline-danger rounded-pill"
+        th:href="@{'/list-employees/delete/' + ${emp.id}}">Delete</a>
+
+        <a href="" class="btn btn-sm btn-outline-primary rounded-pill"
+        th:href="@{'/list-employees/update?id=' + ${emp.id}}">Update</a>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+</body>
+</html>

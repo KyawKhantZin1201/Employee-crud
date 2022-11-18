@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html th:replace="~{layout/adminLayout.html :: layout(~{::main})}" lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Form</title>
+</head>
+<body>
+
+<main role="main">
+   <div class="container mt-4 my-3">
+       <h3>Employee Form</h3>
+       <div th:replace="~{/fragments/emplyeeForm.html :: empForm}"></div>
+   </div>
+</main>
+
+</body>
+</html>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html th:replace="~{layout/adminLayout.html :: layout(~{::main})}" lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<main role="main">
+      <div th:replace="~{/fragments/list-employeeForm.html :: empTable}"></div>
+</main>
+
+</body>
+</html>

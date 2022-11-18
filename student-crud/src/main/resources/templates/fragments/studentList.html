@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<body>
+
+<div th:fragment="studentList" class="container mt-5 my-3">
+  <h1>Student Form</h1>
+  <hr>
+  <a href="" th:href="@{/}" class="btn btn-sm btn-outline-secondary mt-2 my-2">New Student</a>
+
+  <table class="table table-bordered">
+    <thead class="bg-dark text-white">
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Gender</th>
+      <th>DateOfBirth</th>
+      <th>School</th>
+      <th>Grade</th>
+    </tr>
+    </thead>
+    
+    <tbody>
+    <tr th:each="stu : ${students}">
+      <td th:text="${stu.id}"></td>
+      <td th:text="${stu.name}"></td>
+      <td th:text="${stu.gender}"></td>
+      <td th:text="${stu.dateOfBirth}"></td>
+      <td th:text="${stu.school}"></td>
+      <td th:text="${stu.grade}"></td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>

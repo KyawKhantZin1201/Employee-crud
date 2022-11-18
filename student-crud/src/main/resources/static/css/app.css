@@ -1,0 +1,11 @@
+
+.navbar .nav-link{
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: lighter;
+}
+
+.navbar .navbar-brand{
+    font-size: 2rem;
+    font-width: bold;
+}
